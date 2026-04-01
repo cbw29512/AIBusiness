@@ -29,6 +29,15 @@ import ollama_client as ai
 import scout
 import builder
 
+# Gumroad publisher (optional — skips gracefully if token not set)
+SCRIPTS_DIR = ROOT / "scripts"
+sys.path.insert(0, str(SCRIPTS_DIR))
+try:
+    import publish_to_gumroad as gumroad
+    GUMROAD_AVAILABLE = True
+except ImportError:
+    GUMROAD_AVAILABLE = False
+
 CONFIG = json.loads((ROOT / "config.json").read_text())
 LOG_DIR = ROOT / "logs"
 LOG_DIR.mkdir(exist_ok=True)
@@ -108,6 +117,18 @@ def run_cycle():
         product = builder.run()
         if product:
             log(f"📦 Built: {product['title']} — ${product['price_usd']}")
+
+            # Publish to Gumroad → get real buy links before regenerating site
+            if GUMROAD_AVAILABLE:
+                try:
+                    published = gumroad.run()
+                    if published:
+                        log(f"🛒 Published {published} product(s) to Gumroad")
+                    else:
+                        log("🛒 Gumroad: nothing new to publish (or already live)")
+                except Exception as ge:
+                    log(f"⚠️  Gumroad publish error: {ge}")
+
             generate_site()
             deploy_to_github(f"add: {product['title']}")
         else:
