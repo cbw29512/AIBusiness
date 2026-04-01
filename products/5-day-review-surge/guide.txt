@@ -1,0 +1,94 @@
+### THE PROBLEM
+
+Imagine you own a small local business—perhaps a cozy coffee shop or a charming boutique. You know that online reviews are crucial for building your credibility and attracting new customers. But keeping up with regular customer feedback can be overwhelming. According to a survey, businesses with 50+ online reviews see a 27% increase in sales. Without enough reviews, you're missing out on potential business.
+
+For many local businesses like yours, the process of soliciting and managing online reviews is time-consuming and stressful. You might spend hours manually sending emails or making calls to ask for feedback, only to get sporadic results. This not only takes away from your core business activities but also wastes valuable resources that could be better spent on marketing or customer service.
+
+### WHAT YOU'LL HAVE WHEN YOU'RE DONE
+
+By the end of this guide, you'll have:
+
+- ✓ An automated system that sends polite payment reminders for new reviews—no manual emails needed.
+- ✓ A consistent flow of online reviews from satisfied customers.
+- ✓ Improved visibility and credibility on major review platforms like Google My Business.
+- ✓ Time saved to focus on what matters most—running your business.
+
+### WHAT YOU NEED BEFORE YOU START
+
+To get started, you'll need:
+
+- Wave account (free) — sign up at [Waveapps.com](https://www.waveapps.com/)
+- Zapier account (free) — sign up at [Zapier.com](https://zapier.com/)
+
+These tools are free and easy to use. They will help automate the process of collecting online reviews, ensuring you don't miss out on valuable feedback.
+
+### STEP-BY-STEP SETUP
+
+#### Step 1: Sign Up for Wave
+1a. Go to [Waveapps.com](https://www.waveapps.com/).
+1b. Click "Sign up" at the top right corner.
+1c. Follow the prompts and select "Free plan" when prompted.
+
+What you'll see: A simple sign-up form with fields for your email, password, and business name. Once you submit it, you'll land on the Wave dashboard.
+
+#### Step 2: Create an Account on Zapier
+1a. Go to [Zapier.com](https://zapier.com/).
+1b. Click "Sign up" in the top left corner.
+1c. Sign in with your Google account or other preferred method if you choose not to use it.
+
+What you'll see: A welcome screen that asks about apps you use. You can skip this for now and start creating a Zap.
+
+#### Step 3: Set Up Your First Zap
+1a. Click the orange "Create" button (top left of the screen).
+1b. Click "Zaps" from the dropdown menu.
+
+What you'll see: A blank automation builder with two sections labeled "Trigger" and "Action."
+
+#### Step 4: Configure the Trigger
+1a. Click the "Trigger" box.
+1b. In the search bar, type "Google My Business."
+1c. Click on "Google My Business," then choose "New Review Requested."
+
+What you'll see: Recent examples of new review requests appear below.
+
+#### Step 5: Connect Your Google My Business Account
+1a. Click "Connect" next to your chosen trigger.
+1b. Authorize Zapier by clicking "Sign in to [Google My Business]."
+
+What you'll see: A screen that asks for permission to access your Google My Business account. Once authorized, you can close the window.
+
+#### Step 6: Configure the Action
+1a. Click the "Action" box.
+1b. In the search bar, type "Send Email."
+1c. Click on "SendGrid" or another email service provider that you prefer.
+
+What you'll see: The SendGrid app appears in your list of options.
+
+#### Step 7: Set Up Your Email Template
+1a. Choose "SendEmail."
+1b. Fill in the details for the email, including recipient (use {{reviewer.email}} as the placeholder), subject line, and body text.
+1c. Click "Test action" to see a preview of your email.
+
+What you'll see: A test email that looks like it would be sent to the reviewer. Adjust any fields as needed.
+
+#### Step 8: Publish Your Automation
+1a. Once you're happy with the test, click "Publish."
+
+What you'll see: A confirmation message saying your automation is now live and active.
+
+### WHAT TO DO IF SOMETHING GOES WRONG
+
+- **Problem:** You can't connect to Google My Business.
+  - Solution: Check that you have given Zapier permission to access your account. Go back and try signing in again.
+
+- **Problem:** The test email doesn't send.
+  - Solution: Ensure all fields are correctly filled out, especially the recipient's email address. Also, check if SendGrid or any other email service is configured properly.
+
+- **Problem:** The trigger isn't triggering.
+  - Solution: Make sure you have enabled notifications in Google My Business and that your Zapier settings are correct.
+
+### QUICK WIN — DO THIS FIRST
+
+In the next 10 minutes, go to [Waveapps.com](https://www.waveapps.com/), sign up for a free account, and then head over to Zapier. Create an initial automation with "Google My Business" as the trigger and "SendGrid" as the action. This will ensure you’re set up for sending polite review requests automatically.
+
+Don't worry—this looks more complicated than it is. You'll have this set up in under an hour and you won't have to think about it again. Once everything is running smoothly, sit back and enjoy the benefits of improved online credibility and increased customer engagement.

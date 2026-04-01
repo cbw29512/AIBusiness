@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Write your day-3 payment reminder email",
+    "use_case": "Send this email on the third day after a customer left a review asking for feedback.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Quick Question About Your Recent Review\n\nDear [CUSTOMER NAME],\n\nThank you so much for taking the time to share your experience with us! I hope this message finds you well.\n\nWe\u2019d love to know more about your visit. Could you please take a moment to rate and review us on [REVIEW PLATFORM]? Your feedback helps other customers make informed decisions when choosing our services.\n\nIf you have any questions or need assistance, feel free to reply directly to this email.\n\nThank you for being part of the [BUSINESS NAME] family!\n\nBest regards,\n[OWNER NAME]\n[OWNER EMAIL]"
+  },
+  {
+    "label": "Create a social media post about reviews",
+    "use_case": "Post this on your business\u2019s Facebook or Instagram page to encourage more people to leave reviews.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\n[DATE/TIME]\n\n\ud83c\udf1f [BUSINESS NAME] is growing thanks to our amazing customers like YOU! \ud83c\udf1f\n\nWe\u2019re excited to see that so many of you are leaving wonderful reviews on [REVIEW PLATFORM]. If you\u2019ve had a fantastic experience, we\u2019d love for more people to know about it!\n\nPlease take a moment to share your thoughts with us. Your review can help others make the right decision when choosing where to get services from.\n\nThank you so much for supporting us! \ud83d\ude4f\n\n#reviews #feedback #supportlocal"
+  },
+  {
+    "label": "Write an email to send to regular customers",
+    "use_case": "Send this email to your loyal clients reminding them of the importance of leaving a review.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Share Your Experience with Us!\n\nDear [CUSTOMER NAME],\n\nI hope you\u2019re doing well and enjoying all that life has to offer! At [BUSINESS NAME], we value each one of our customers, especially those who choose us for their needs.\n\nYour satisfaction is what drives us every day. To help others find the best services or products, could you consider leaving a review on [REVIEW PLATFORM]? Your honest feedback can make a huge difference in someone else\u2019s decision to try out our offerings.\n\nThank you so much for your support and trust!\n\nBest,\n[OWNER NAME]\n[BUSINESS PHONE NUMBER]"
+  },
+  {
+    "label": "Design a QR code linking to reviews",
+    "use_case": "Place this on business cards, signs, or website footer to encourage customers to review the business easily.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: QR Code for Reviews!\n\nDear [CUSTOMER NAME],\n\nThank you so much for choosing us! Your support means a lot to us.\n\nPlease scan this QR code to leave a review on [REVIEW PLATFORM]: [QR CODE IMAGE URL]\n\n[QR Code Image URL]\n\nYour feedback will help others make informed decisions and strengthen our community. If you have any questions or need assistance, feel free to reply directly to this email.\n\nThank you for being part of the [BUSINESS NAME] family!\n\nBest regards,\n[OWNER NAME]"
+  },
+  {
+    "label": "Write a review request follow-up message",
+    "use_case": "Send this message after someone has left a review asking if they can improve their rating or add more details.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Enhance Your Review!\n\nDear [CUSTOMER NAME],\n\nThank you for taking the time to share your experience with us! We\u2019re delighted that you enjoyed your visit.\n\nWould you be willing to take a moment and enhance your review on [REVIEW PLATFORM]? Your detailed feedback can provide valuable insights for other customers considering our services.\n\nIf you have any more questions or need assistance, feel free to reply directly to this email.\n\nThank you again!\n\nBest regards,\n[OWNER NAME]\n[BUSINESS PHONE NUMBER]"
+  }
+]

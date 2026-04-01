@@ -1,0 +1,26 @@
+{
+  "product_id": "20260401-142449-no-more-late-payments",
+  "slug": "no-more-late-payments",
+  "title": "No More Late Payments!",
+  "tagline": "Secure payments every time, stress-free.",
+  "description": "Tired of late payments causing cash flow issues? Our Late Payment Prevention Kit guarantees on-time payments for freelancers and small agencies. Experience smoother operations and happier clients with our proven templates and strategies.",
+  "features": [
+    "Proven templates to streamline invoicing",
+    "Automated reminders for client compliance",
+    "Customizable payment terms for flexibility",
+    "Detailed guides for effective communication",
+    "24/7 access to support team"
+  ],
+  "who_its_for": "Freelancers, consultants, and small agencies seeking reliable payment solutions.",
+  "price_usd": 29,
+  "product_type": "template",
+  "category": "payment_collection",
+  "listing_url": "",
+  "status": "draft",
+  "signal_score": 8,
+  "prompt_count": 0,
+  "created_at": "2026-04-01T14:24:49.021496",
+  "updated_at": "2026-04-01T14:24:49.021502",
+  "version": 1,
+  "pdf_file": "no-more-late-payments.pdf"
+}
