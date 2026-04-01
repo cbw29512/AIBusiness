@@ -1,0 +1,28 @@
+{
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "model": "auto",
+    "preferred_models": ["llama3.2", "llama3", "mistral", "phi3", "gemma2", "qwen2.5"],
+    "temperature": 0.7,
+    "timeout_seconds": 120
+  },
+  "business": {
+    "name": "AIBusiness",
+    "site_title": "Quick Fixes for Real Business Problems",
+    "site_tagline": "AI-researched solutions to the exact problems slowing your business down",
+    "contact_email": "divclass74@icloud.com",
+    "gumroad_username": "divclass"
+  },
+  "gumroad": {
+    "access_token": "mgntmP0yKonvNW92qoqmqzY_aOOivrY0C75eWnG75Pc"
+  },
+  "scout": {
+    "problems_per_cycle": 3,
+    "min_signal_score": 6,
+    "search_enabled": true
+  },
+  "deploy": {
+    "github_repo": "https://github.com/cbw29512/AIBusiness",
+    "auto_deploy": true
+  }
+}
