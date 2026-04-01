@@ -260,10 +260,20 @@ def parse_bullets(guide_text: str, keyword: str) -> list[str]:
 def cover_page(product: dict, styles: dict) -> list:
     story = []
 
+    # Version + date info
+    version = product.get("version", 1)
+    last_updated = product.get("last_updated") or product.get("created_at", "")
+    try:
+        updated_date = datetime.fromisoformat(last_updated).strftime("%B %Y")
+    except (ValueError, TypeError):
+        updated_date = datetime.now().strftime("%B %Y")
+
+    version_label = f"v{version} · Updated {updated_date}" if version > 1 else updated_date
+
     # Dark header bar (faked with table)
     header_data = [[Paragraph(
         f"<font color='#f59e0b'>AIBusiness</font> &nbsp;·&nbsp; "
-        f"<font color='#9ca3af'>{datetime.now().strftime('%B %Y')}</font>",
+        f"<font color='#9ca3af'>{version_label}</font>",
         ParagraphStyle("hdr", fontName="Helvetica", fontSize=9, textColor=WHITE)
     )]]
     header = Table(header_data, colWidths=[6.8*inch])
@@ -324,7 +334,7 @@ def cover_page(product: dict, styles: dict) -> list:
         "Copy-paste templates",
         "Free tool recommendations",
         "Tested AI prompts",
-        "Quick Win checklist",
+        "Living updates included",
     ]
     chips = [[Paragraph(item,
         ParagraphStyle("chip", fontName="Helvetica", fontSize=8.5,

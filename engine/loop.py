@@ -28,6 +28,7 @@ sys.path.insert(0, str(ROOT / "engine"))
 import ollama_client as ai
 import scout
 import builder
+import updater
 
 # Gumroad publisher (optional — skips gracefully if token not set)
 SCRIPTS_DIR = ROOT / "scripts"
@@ -135,6 +136,34 @@ def run_cycle():
             log("📭 Nothing to build this cycle")
     except Exception as e:
         log(f"❌ Build error: {e}")
+
+    # Update one existing product (re-research + refresh content + new prompts)
+    try:
+        updated = updater.run()
+        if updated:
+            log(f"🔄 Updated: {updated['title']} → v{updated.get('version', '?')}")
+
+            # Re-publish updated PDF to Gumroad
+            if GUMROAD_AVAILABLE:
+                try:
+                    product_dir = ROOT / "products" / updated["slug"]
+                    if product_dir.exists():
+                        gumroad_id = updated.get("gumroad_id")
+                        pdf_name   = updated.get("pdf_file", f"{updated['slug']}.pdf")
+                        pdf_path   = product_dir / pdf_name
+                        if gumroad_id and pdf_path.exists():
+                            ok = gumroad.upload_pdf(gumroad_id, pdf_path)
+                            if ok:
+                                log(f"📤 Re-uploaded updated PDF to Gumroad")
+                except Exception as ge:
+                    log(f"⚠️  Gumroad re-upload error: {ge}")
+
+            generate_site()
+            deploy_to_github(f"update: {updated['title']} v{updated.get('version', '?')}")
+        else:
+            log("🔄 Updater: all products are current")
+    except Exception as e:
+        log(f"⚠️  Updater error: {e}")
 
     log("✅ CYCLE COMPLETE")
     return True
