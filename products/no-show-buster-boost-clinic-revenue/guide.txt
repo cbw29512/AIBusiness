@@ -1,0 +1,113 @@
+### THE PROBLEM
+
+Clinics and salons lose revenue every time a patient or client cancels last-minute or doesn't show up at all. This can lead to lost income, unhappy clients, and increased stress for staff. For example, if you have 5 no-shows per week, that's $2,000 in potential revenue gone. No-Show Buster will help by sending automated reminders and follow-ups, ensuring you never miss a booking.
+
+### WHAT YOU'LL HAVE WHEN YOU'RE DONE
+
+1. ✓ An automated system that sends polite payment reminders for you — no manual emails needed.
+2. ✓ Automated notifications to clients before their appointment to reduce no-shows.
+3. ✓ Integration of Calendly and Zapier to handle all the behind-the-scenes work.
+4. ✓ A seamless setup process, allowing you to focus on your business.
+
+### WHAT YOU NEED BEFORE YOU START
+
+1. **Calendly Account** (free) — sign up at calendly.com
+2. **Zapier Account** (free) — sign up at zapier.com
+3. **Gmail Account** — used for sending automated emails, no need to create a new one if you already have one.
+
+### STEP-BY-STEP SETUP
+
+1. **Create a Calendly Account**
+   - Go to calendly.com and click "Sign Up."
+   - Choose "Personal" or "Professional," as it’s free.
+   - Follow the prompts to set up your profile. You can skip connecting payment methods for now.
+
+2. **Set Up Webhooks in Calendly (for automated notifications)**
+   1a. Click on the three dots next to “Settings” and select “Webhooks.”
+   1b. Click "Create a new webhook."
+   1c. Enter a name for your webhook, such as "No-Show Buster."
+   1d. In the “Endpoint URL,” copy and paste this URL: `https://zapier.com/webhook/your-webhook-key-here`
+   (Note: You need to replace "your-webhook-key-here" with an actual key from Zapier, which you'll set up later.)
+   1e. Select the events you want to trigger a webhook for: “Invitee Created Events,” “Invitee Canceled Events,” and “Routing Form Submissions.”
+   1f. Click "Create Webhook."
+
+3. **Create Your First Automation in Zapier**
+   - Go to zapier.com.
+   - Click on “Sign up” (use your Google account if you want to speed things up).
+   - You can skip the app selection screen for now.
+
+4. **Set Up the Trigger (Calendly Events)**
+   1a. Click the orange "Create" button in the top-left corner.
+   1b. Click “Zaps.”
+   1c. In the search bar, type “Calendly” and select it from the list.
+   1d. Choose “Invitee Created Events,” “Invitee Canceled Events,” or “Routing Form Submissions.” For this guide, we’ll use “Invitee Created Events.”
+   1e. Click "Continue" and connect your Calendly account when prompted (click "Sign in to Calendly").
+   1f. Zapier will find recent examples — pick one and click "Continue."
+
+5. **Set Up the Action (Sending Email)**
+   1a. In the “Action” box, search for “Gmail.”
+   1b. Choose “Send Email.”
+   1c. Click "Continue" and connect your Gmail account when prompted.
+   1d. Fill in the email details:
+      - **To:** Enter a placeholder like `{{ invitee.email }}` to automatically fill in the client’s email.
+      - **Subject:** Enter something like “Reminder: Your Appointment is Confirmed.”
+      - **Body:** Copy and paste this template into the body field:
+
+```
+Hi {{ invitee.name }},
+
+I hope you're having a great day! Just wanted to remind you that we have your appointment scheduled at [Date and Time].
+
+Looking forward to seeing you!
+
+Best,
+Your Clinic/Consultant
+```
+
+   1e. Click "Test action" — Zapier will do the action once so you can see it work.
+   1f. If everything looks right, click "Publish" — your automation is now live.
+
+6. **Set Up Cancellation and Routing Form Follow-Ups**
+   - Repeat steps 4-5 but for “Invitee Canceled Events” and “Routing Form Submissions.”
+   - For cancellation notifications, you can use a template like:
+
+```
+Hi {{ invitee.name }},
+
+I wanted to follow up about your cancelled appointment on [Date and Time]. We would love it if you could reschedule.
+
+Best,
+Your Clinic/Consultant
+```
+
+7. **Test Your Setup**
+   - Make a new booking through Calendly.
+   - Check your email for the reminder message.
+   - Cancel an existing booking to test the cancellation notification.
+   - Submit a routing form and check that Zapier processes it correctly.
+
+### WHAT TO DO IF SOMETHING GOES WRONG
+
+1. **Webhook Not Triggering:**
+   - Go back to Calendly and check if the webhook is enabled and set up correctly.
+   - Ensure your Zapier trigger is properly configured with the correct endpoint URL.
+   
+2. **Emails Not Sending:**
+   - Check your Gmail settings for spam filters or blocked senders.
+   - Verify that you’ve connected both Calendly and Zapier accounts successfully.
+
+3. **Zap Not Working:**
+   - Go back to Zapier and check if all steps are set up correctly, especially the “Test action” step.
+   - Ensure the triggers and actions match exactly as they were configured in the builder.
+
+4. **General Issues:**
+   - Check the tool’s help center for the latest steps or reach out to their support team for assistance.
+
+### QUICK WIN — DO THIS FIRST
+
+**Send an immediate reminder to a client who has just booked an appointment today.**
+
+1. Go to Calendly and create a new booking.
+2. Immediately after creating the booking, check your email for the reminder message that Zapier should have sent you.
+
+By doing this first step, you ensure everything is set up correctly before moving on to more complex tasks. This quick win will give you confidence in your setup and help reduce any last-minute no-shows today.

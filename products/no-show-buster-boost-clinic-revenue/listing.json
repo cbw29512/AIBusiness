@@ -1,0 +1,26 @@
+{
+  "product_id": "20260401-151047-no-show-buster-boost-clinic-revenue",
+  "slug": "no-show-buster-boost-clinic-revenue",
+  "title": "No-Show Buster: Boost Clinic Revenue",
+  "tagline": "Eliminate last-minute cancellations and boost profits.",
+  "description": "Stop losing revenue to no-shows. Our checklist ensures clients stay on board, reducing cancellations by up to 50%. Say goodbye to missed appointments and hello to higher revenues.",
+  "features": [
+    "Automated reminders for perfect client engagement",
+    "Follow-up emails post-appointment confirmation",
+    "Customizable templates for seamless integration",
+    "Analytics dashboard tracks performance and trends",
+    "Mobile-friendly access anytime, anywhere"
+  ],
+  "who_its_for": "Ideal for clinics, salons, coaches, gyms, consultants looking to increase revenue.",
+  "price_usd": 29,
+  "product_type": "checklist",
+  "category": "no_show_prevention",
+  "listing_url": "https://divclass.gumroad.com/l/no-show-buster-boost-clinic-revenue",
+  "status": "draft",
+  "signal_score": 8,
+  "prompt_count": 5,
+  "created_at": "2026-04-01T15:10:47.528376",
+  "updated_at": "2026-04-01T15:10:47.528383",
+  "version": 1,
+  "pdf_file": "no-show-buster-boost-clinic-revenue.pdf"
+}

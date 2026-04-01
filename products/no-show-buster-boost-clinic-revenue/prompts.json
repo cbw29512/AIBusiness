@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Write your day-3 payment reminder email",
+    "use_case": "Send this email out 3 days before an appointment to remind customers of their upcoming appointment and the cost.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Reminder - Your [SERVICE NAME] Appointment on [DATE]\nHi [CUSTOMER NAME],\nWe just wanted to remind you that you have an appointment at our clinic this coming [DATE] for a [SERVICE NAME]. The cost of the service is $[PRICE]. Please make sure to pay your invoice in full by the day of the appointment. If you need to cancel or reschedule, please do so at least 24 hours in advance.\nIf you have any questions, feel free to reply to this email!\nBest regards,\n[YOUR COMPANY NAME]"
+  },
+  {
+    "label": "Create a text message follow-up for missed appointments",
+    "use_case": "Set up automated text messages that will be sent out the day after an appointment was scheduled (but not yet missed) to gently remind customers of their upcoming appointment.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Appointment Reminder - [DATE]\nHi [CUSTOMER NAME],\nJust a friendly reminder that you have an appointment at our clinic on [DATE] for a [SERVICE NAME]. If you need to cancel or reschedule, please do so as soon as possible. We look forward to seeing you.\nIf you have any questions, feel free to reply to this message!\nBest regards,\n[YOUR COMPANY NAME]"
+  },
+  {
+    "label": "Generate a follow-up email for no-shows",
+    "use_case": "Send out an email the day after a scheduled appointment if the customer did not show up. Offer a discount or promotion as an incentive to reschedule.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: We Missed You - [DATE]\nHi [CUSTOMER NAME],\nWe noticed that you did not make it to your appointment on [DATE]. We hope everything is okay and we would love to see you again. As a gesture of goodwill, please consider rescheduling for 10% off your next visit.\nIf you do need to come in, feel free to contact us at any time. Thanks for understanding!\nBest regards,\n[YOUR COMPANY NAME]"
+  },
+  {
+    "label": "Set up automatic appointment reminders via SMS",
+    "use_case": "Automatically send a text message reminder the day before an appointment to ensure customers don\u2019t forget.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Appointment Reminder - [DATE]\nHi [CUSTOMER NAME],\nJust a friendly reminder that you have an appointment at our clinic on [DATE] for a [SERVICE NAME]. Please make sure to arrive on time.\nIf you need to cancel or reschedule, please do so as soon as possible. We look forward to seeing you.\nBest regards,\n[YOUR COMPANY NAME]"
+  },
+  {
+    "label": "Create an automated phone call script",
+    "use_case": "Automate the process of making follow-up calls for no-shows and missed appointments.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nHi [CUSTOMER NAME],\nThis is a reminder that you had an appointment at our clinic on [DATE]. We hope everything is okay and we would love to see you again. If there was any issue, please let us know so we can help.\nIf you do need to come in, feel free to contact us at [PHONE NUMBER] or reply to this message.\nThanks for your understanding!\nBest regards,\n[YOUR COMPANY NAME]"
+  }
+]
