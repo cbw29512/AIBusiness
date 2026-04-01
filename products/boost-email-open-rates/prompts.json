@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Write your day-3 payment reminder email",
+    "use_case": "Send a friendly reminder after customers haven't opened their first order confirmation email.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Your Order Confirmation Follow-Up - [Your Company Name]\n\nDear [Customer's First Name],\n\nThank you for choosing [Your Company Name]! It\u2019s been a few days since we sent your order, and I hope everything is going well. If there are any issues or if you have questions, please let us know.\n\nBest regards,\n[Your Full Name]\n[Your Position]\n[Your Contact Information]"
+  },
+  {
+    "label": "Create a welcome series for new subscribers",
+    "use_case": "Automate the first three emails sent to new subscribers after they sign up, introducing your brand and key offerings.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Welcome to [Your Company Name] - Your Path to Success!\n\nDear [Subscriber's First Name],\n\nWelcome to [Your Company Name]! We are thrilled to have you join our community of passionate customers.\n\nIn this email, we will introduce you to what makes us unique and share some exciting updates. Over the next few days, you\u2019ll receive more emails from us that will help you get the most out of your experience with [Your Company Name].\n\nStay tuned!\n\nBest regards,\n[Your Full Name]\n[Your Position]\n[Your Contact Information]"
+  },
+  {
+    "label": "Write a product launch email",
+    "use_case": "Announce new products or services to existing customers, encouraging them to explore and purchase.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Introducing [Product Name] - The Latest from [Your Company Name]\n\nDear [Customer's First Name],\n\nWe are excited to announce our latest offering, [Product Name], which we believe will be a game-changer for our customers like you. Here\u2019s what it can do:\n\n[Provide 1-2 sentences about the product benefits.]\n\nWould love your feedback and thoughts on this new addition! If you\u2019re interested in learning more or purchasing [Product Name], please visit our website at [Your Website URL].\n\nBest regards,\n[Your Full Name]\n[Your Position]\n[Your Contact Information]"
+  },
+  {
+    "label": "Craft a post-purchase thank-you email",
+    "use_case": "Send a thank-you message to customers after they make a purchase, ensuring a positive experience and encouraging future buys.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: Thank You for Your Purchase - We Hope You Love It!\n\nDear [Customer's First Name],\n\nThank you so much for choosing [Your Company Name]! I\u2019m thrilled to know that you\u2019ve selected one of our products. We hope it brings you joy and serves its purpose well.\n\nIf there are any issues or if you have questions, please don\u2019t hesitate to contact us at [Your Contact Information].\n\nLooking forward to serving you again soon!\n\nWarm regards,\n[Your Full Name]\n[Your Position]\n[Your Contact Information]"
+  },
+  {
+    "label": "Develop a customer feedback email",
+    "use_case": "Gather customer insights by requesting feedback on their recent purchases, improving future services and products.",
+    "prompt": "[BRACKETS] (Paste this into chatgpt.com or claude.ai. Fill in the [BRACKETED] parts with your details first.)\n\nSubject: We Value Your Feedback - Help Us Make Our Service Even Better!\n\nDear [Customer's First Name],\n\nI hope you are enjoying your time with us at [Your Company Name]. As a valued customer, we would love to hear from you about your recent experience. Your feedback is incredibly important to us and will help us continue to provide the best possible service.\n\nPlease take a moment to share your thoughts on this email. We appreciate your support!\n\nWarm regards,\n[Your Full Name]\n[Your Position]\n[Your Contact Information]"
+  }
+]

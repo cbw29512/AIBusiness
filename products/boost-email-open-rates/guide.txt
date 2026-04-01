@@ -1,0 +1,60 @@
+THE PROBLEM
+
+Imagine you run a small online store selling handmade jewelry. You've been sending out promotional emails to your subscribers but only a handful open them. This means less visibility for your products and lost sales. Over time, this can lead to decreased revenue and higher stress managing email campaigns manually. For instance, if just 10% of your subscribers open your emails, you might miss out on repeat business from those who didn’t see the promotions.
+
+WHAT YOU’LL HAVE WHEN YOU'RE DONE
+
+✓ A comprehensive list of your customers' interests so you can send more targeted and engaging emails.
+✓ An automated system that sends polite payment reminders for you — no manual emails needed.
+✓ Personalized email campaigns based on customer behavior, increasing open rates significantly.
+✓ Improved customer engagement through better segmentation and relevance in your emails.
+✓ Higher conversion rates as a result of optimized email content tailored to your audience.
+
+WHAT YOU NEED BEFORE YOU START
+
+Mailchimp (free) — sign up at mailchimp.com
+ConvertKit (free tier for small businesses) — sign up at kit.com
+
+STEP-BY-STEP SETUP
+
+1. Create a Mailchimp Account
+   Go to mailchimp.com and click "Sign up free". Enter your email, username, and password.
+   After entering the details, you’ll see a confirmation message asking you to check your email for a link.
+2. Check Your Email and Confirm Your Mailchimp Account
+   Click on the confirmation link in your inbox. You’ll receive an email from Mailchimp with a button or link to confirm. When you click it, you’ll see a message saying "Your account is now active."
+3. Create Your Audience (Email List)
+   In the left sidebar, click “Audience” (the person icon). Click “Add contacts” and then “Import contacts” if you have a spreadsheet of emails or “Add a subscriber” to add people one by one.
+4. Build a Signup Form
+   To build your list from scratch, click “Signup forms” in the Audience menu. Then, click “Form builder” — this creates a form that people can fill in to join your list.
+5. Customize Your Form Title and Save It
+   Click on “Customize” and type a clear title for your signup form (e.g., "Join our newsletter"). After customizing, click “Save” to finalize the changes.
+6. Get Your Signup Form Link
+   Mailchimp gives you a link to your signup form. Add this to your website or share it with your contacts via social media and email.
+7. Create an Email Campaign in Mailchimp
+   In the left sidebar, click "Create" (the plus icon). Click “Email” and select “Regular email.” Give your campaign a name that’s just for you — click “Begin.”
+8. Add Recipients to Your Campaign
+   Under “To,” click “Add recipients” and select your audience/list.
+9. Set Up the From Name and Email Address
+   Under “From,” enter your full name and your email address so it matches your brand.
+10. Write an Engaging Subject Line
+    Under “Subject,” type a clear and specific subject line that will entice people to open the email (e.g., "Exclusive Jewelry Offers Just for You").
+11. Design Your Email Campaign
+    Click “Design email” — you’ll see Mailchimp’s template library. Pick a simple template like the basic “1 Column” layout.
+12. Edit the Text Blocks in Your Template
+    Click on any text block to edit it. Type your message and include engaging content tailored to your audience.
+13. Preview and Test Your Email Campaign
+    Click the preview eye icon to see how your email looks. Use "Send test email" to check if you can receive the email yourself — this helps ensure everything works before sending to your list.
+14. Send Your Email Campaign
+    When you’re happy with your campaign, click “Continue” then “Send now.” Mailchimp will send the email and show you how many people opened it.
+
+WHAT TO DO IF SOMETHING GOES WRONG
+
+- If you can't find a specific button or menu item: Check the tool's help centre for the latest steps.
+- If your emails aren’t sending: Ensure all fields are filled in correctly, including from name and email address. Also, check that you’ve set up SPF, DKIM, and DMARC records as required by ConvertKit (this is optional but recommended).
+- If people don't open your emails: Double-check your subject lines for clarity and personalization. Consider adding a clear call to action at the end of your email.
+
+QUICK WIN — DO THIS FIRST
+
+Make sure every new customer subscribes to your newsletter or mailing list by adding a signup form on your website. Use the Mailchimp signup form builder to create a simple, attractive form that people can easily fill out. Place it prominently on your homepage and in other strategic locations like product pages and contact forms. This ensures more of your visitors will sign up right away, giving you an initial audience to target with your email campaigns.
+
+By following these steps, you’ll set up robust email marketing tools that will help boost open rates, engage customers better, and ultimately drive sales for your small business or creative venture. Don't worry — this looks more complicated than it is. You'll have this set up in under an hour and you'll never have to think about it again once everything is configured!
