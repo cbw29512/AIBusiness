@@ -3,16 +3,13 @@ name: Deploy AIBusiness Site
 on:
   push:
     branches: [ main ]
-  schedule:
-    # Run every hour to check for new products
-    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       pages: write
       id-token: write
     
@@ -32,11 +29,16 @@ jobs:
     - name: Generate Site
       run: |
         python3 site/generate.py
+        python3 scripts/generate_gumroad_page.py || true
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './'
         
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
-        exclude_assets: 'engine/**,state/**,scripts/**,products/*/guide.txt,products/*/prompts.json'
+      id: deployment
+      uses: actions/deploy-pages@v4
