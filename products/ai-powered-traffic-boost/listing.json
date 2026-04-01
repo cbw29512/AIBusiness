@@ -1,0 +1,26 @@
+{
+  "product_id": "20260401-152514-ai-powered-traffic-boost",
+  "slug": "ai-powered-traffic-boost",
+  "title": "AI-Powered Traffic Boost",
+  "tagline": "Generate viral content, boost engagement, grow your audience!",
+  "description": "Tired of dull posts that go unnoticed? Our AI guide helps you create captivating content in minutes. Engage more with less effort and skyrocket your social media presence.",
+  "features": [
+    "AI-driven content creation for maximum impact",
+    "Tailored to resonate with your specific audience",
+    "Save time on brainstorming, writing, and editing",
+    "Optimized for high engagement and virality",
+    "Instantly grow your followers and brand awareness"
+  ],
+  "who_its_for": "Small business owners creating short-form content on LinkedIn, Twitter/X, TikTok",
+  "price_usd": 29,
+  "product_type": "guide",
+  "category": "ai_short_form",
+  "listing_url": "https://divclass.gumroad.com/l/ai-powered-traffic-boost",
+  "status": "draft",
+  "signal_score": 8,
+  "prompt_count": 0,
+  "created_at": "2026-04-01T15:25:14.074915",
+  "updated_at": "2026-04-01T15:25:14.074928",
+  "version": 1,
+  "pdf_file": "ai-powered-traffic-boost.pdf"
+}
