@@ -169,7 +169,8 @@ def search_web_signal(problem_title: str) -> str:
         related = [r.get("Text", "") for r in data.get("RelatedTopics", [])[:3]]
         combined = abstract + " " + " ".join(related)
         return combined[:500] if combined.strip() else "No web signal found"
-    except Exception:
+    except Exception as e:
+        print(f"   ⚠️  Web search failed: {e}")
         return "Web search unavailable — using AI signal scoring only"
 
 
