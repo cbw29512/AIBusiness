@@ -330,6 +330,23 @@ window.SRD_DATA = {
     }
   ],
 
+  // Conditions SRD 5.2.1 Data
+  conditions: [
+    { name: "Blinded", desc: "Can't see and automatically fails checks that require sight. Attack rolls against the creature have advantage, and creature's attack rolls have disadvantage." },
+    { name: "Charmed", desc: "Can't attack the charmer or target charmer with harmful abilities or magical effects. Charmer has advantage on social interaction checks." },
+    { name: "Frightened", desc: "Disadvantage on ability checks and attack rolls while source of fear is in sight. Can't willingly move closer to the source of fear." },
+    { name: "Grappled", desc: "Speed becomes 0 and can't benefit from any bonus to speed. Ends if grappler is incapacitated or moved away." },
+    { name: "Incapacitated", desc: "Can't take actions or reactions." },
+    { name: "Invisible", desc: "Impossible to see without magic or special senses. Attacks against creature have disadvantage, creature's attacks have advantage." },
+    { name: "Paralyzed", desc: "Incapacitated and can't move or speak. Automatically fails Strength and Dexterity saving throws. Attacks against creature have advantage, and melee attacks within 5 ft. are critical hits." },
+    { name: "Petrified", desc: "Transformed into solid inanimate substance. Weight increases by x10. Incapacitated, unaware, automatically fails Str/Dex saves. Resistance to all damage." },
+    { name: "Poisoned", desc: "Disadvantage on attack rolls and ability checks." },
+    { name: "Prone", desc: "Can only crawl or spend half speed to stand. Disadvantage on attack rolls. Attacks against creature have advantage if within 5 ft., otherwise disadvantage." },
+    { name: "Restrained", desc: "Speed becomes 0. Attacks against creature have advantage, creature's attacks have disadvantage. Disadvantage on Dexterity saving throws." },
+    { name: "Stunned", desc: "Incapacitated, can't move, and speaks falteringly. Automatically fails Strength and Dexterity saving throws. Attacks against creature have advantage." },
+    { name: "Unconscious", desc: "Incapacitated, can't move or speak, unaware. Drops held items and falls prone. Automatically fails Str/Dex saves. Attacks within 5 ft. are critical hits." }
+  ],
+
   // XP Threshold Table per character level (Easy, Medium, Hard, Deadly)
   xpThresholds: {
     1:  [25, 50, 75, 100],

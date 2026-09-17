@@ -24,6 +24,24 @@
       <p>🎲 Enhance your campaign with SRD-compatible DM tools!</p>
     </div>
 
+    <!-- Quick DM Tools: Dice Roller Bar -->
+    <section class="card dice-roller-panel">
+      <h2>🎲 Quick Dice Roller</h2>
+      <div class="dice-bar">
+        <button class="btn btn-dice" data-sides="4">d4</button>
+        <button class="btn btn-dice" data-sides="6">d6</button>
+        <button class="btn btn-dice" data-sides="8">d8</button>
+        <button class="btn btn-dice" data-sides="10">d10</button>
+        <button class="btn btn-dice" data-sides="12">d12</button>
+        <button class="btn btn-dice" data-sides="20">d20</button>
+        <button class="btn btn-dice" data-sides="100">d100</button>
+        <button id="clear-dice-log" class="btn btn-secondary btn-sm">Clear Log</button>
+      </div>
+      <div id="dice-log" class="dice-log">
+        <span class="dice-placeholder">Click a die above to roll...</span>
+      </div>
+    </section>
+
     <!-- Generator Control Panel -->
     <section class="card control-panel">
       <h2>Encounter Generator</h2>
@@ -52,7 +70,16 @@
         <div class="form-group btn-group">
           <button id="generate-btn" class="btn btn-primary">Generate Encounter</button>
           <button id="regenerate-btn" class="btn btn-secondary">🎲 Regenerate</button>
+          <button id="save-encounter-btn" class="btn btn-accent">💾 Save</button>
         </div>
+      </div>
+    </section>
+
+    <!-- Saved Encounters Section -->
+    <section class="card saved-panel" id="saved-panel">
+      <h2>💾 Saved Encounters</h2>
+      <div id="saved-encounters-list" class="saved-encounters-list">
+        <p class="placeholder-text">No saved encounters yet. Generate an encounter and click "Save".</p>
       </div>
     </section>
 
@@ -78,6 +105,14 @@
         <div id="loot-output" class="loot-output">
           <p class="placeholder-text">Click "Roll Loot" to generate treasure for this encounter difficulty.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- SRD 5.2.1 Conditions Quick Reference -->
+    <section class="card conditions-panel">
+      <h2>📖 Conditions Quick Reference (SRD 5.2.1)</h2>
+      <div id="conditions-grid" class="conditions-grid">
+        <!-- Dynamic Condition Cards -->
       </div>
     </section>
 
