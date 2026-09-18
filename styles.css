@@ -108,93 +108,6 @@ body {
   padding-bottom: 0.5rem;
 }
 
-/* Quick Dice Roller */
-.dice-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.dice-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  background-color: #0f172a;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  border: 1px solid var(--border-color);
-  margin-bottom: 0.75rem;
-}
-
-.dice-btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.btn-dice {
-  background-color: #334155;
-  color: #f8fafc;
-  border: 1px solid #475569;
-  padding: 0.4rem 0.8rem;
-  font-weight: 700;
-  border-radius: 4px;
-}
-
-.btn-dice:hover {
-  background-color: var(--accent-gold);
-  color: #0f172a;
-}
-
-.btn-d20 {
-  background-color: #b91c1c;
-  border-color: #ef4444;
-}
-
-.dice-modifier-group {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.mod-input, .qty-input {
-  width: 50px;
-  padding: 0.3rem;
-  background-color: #1e293b;
-  border: 1px solid var(--border-color);
-  color: #ffffff;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.dice-log {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
-  min-height: 48px;
-  max-height: 120px;
-  overflow-y: auto;
-  font-family: monospace;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0.3rem;
-}
-
-.dice-roll-entry {
-  color: #a7f3d0;
-}
-
-.dice-roll-crit {
-  color: #fef08a;
-  font-weight: bold;
-}
-
 /* Form Controls */
 .form-grid {
   display: grid;
@@ -242,11 +155,6 @@ body {
   font-size: 0.95rem;
 }
 
-.btn-sm {
-  padding: 0.35rem 0.75rem;
-  font-size: 0.8rem;
-}
-
 .btn-primary {
   background-color: var(--accent-gold);
   color: #0f172a;
@@ -291,7 +199,7 @@ body {
   color: #0f172a;
 }
 
-/* Results Actions & Summary */
+/* Encounter Summary & Monster Cards */
 .results-header {
   display: flex;
   justify-content: space-between;
@@ -299,11 +207,6 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.25rem;
-}
-
-.results-actions {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .encounter-summary {
@@ -314,7 +217,6 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  width: 100%;
 }
 
 .summary-tag {
@@ -326,87 +228,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.25rem;
-}
-
-/* Saved Encounters Library */
-.saved-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.saved-card {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.saved-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  color: var(--accent-gold);
-}
-
-.saved-card-meta {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.saved-card-actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-/* Quick Reference Section */
-.ref-tabs {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.btn-tab {
-  background-color: #0f172a;
-  color: var(--text-muted);
-  border: 1px solid var(--border-color);
-}
-
-.btn-tab.active {
-  background-color: var(--accent-gold);
-  color: #0f172a;
-  font-weight: bold;
-}
-
-.ref-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.ref-card {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1rem;
-}
-
-.ref-card h4 {
-  color: #ef4444;
-  margin-bottom: 0.4rem;
-  border-bottom: 1px solid #b91c1c;
-  padding-bottom: 0.25rem;
-}
-
-.ref-card p {
-  font-size: 0.85rem;
-  color: var(--text-primary);
 }
 
 /* Monster Stat Card */
@@ -489,10 +310,10 @@ body {
   padding: 1rem;
 }
 
-.placeholder-text {
-  color: var(--text-muted);
-  font-style: italic;
-  font-size: 0.9rem;
+.loot-item-list {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Print Panel */
@@ -590,7 +411,7 @@ body {
     color: #000000 !important;
   }
 
-  .app-header, .ad-banner, .dice-roller-panel, .control-panel, .saved-encounters-panel, .ref-panel, .loot-section, .print-header, .app-footer, .btn, .results-actions {
+  .app-header, .ad-banner, .control-panel, .loot-section, .print-header, .app-footer, .btn {
     display: none !important;
   }
 

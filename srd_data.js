@@ -7,86 +7,26 @@ window.SRD_DATA = {
   // Monster SRD Database
   monsters: [
     {
-      name: "Commoner",
-      cr: "0",
-      xp: 10,
-      size: "Medium",
-      type: "Humanoid (any race)",
-      alignment: "Any alignment",
-      ac: 10,
-      acType: "",
-      hp: "4 (1d8)",
+      name: "Goblin",
+      cr: "1/4",
+      xp: 50,
+      size: "Small",
+      type: "Humanoid (goblinoid)",
+      alignment: "Neutral Evil",
+      ac: 15,
+      acType: "leather armor, shield",
+      hp: "7 (2d6)",
       speed: "30 ft.",
-      stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
-      senses: "passive Perception 10",
-      languages: "any one language (usually Common)",
-      traits: [],
-      actions: [
-        { name: "Club", desc: "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage." }
-      ]
-    },
-    {
-      name: "Acolyte",
-      cr: "1/8",
-      xp: 25,
-      size: "Medium",
-      type: "Humanoid (any race)",
-      alignment: "Any alignment",
-      ac: 10,
-      acType: "",
-      hp: "9 (2d8)",
-      speed: "30 ft.",
-      stats: { str: 10, dex: 10, con: 10, int: 10, wis: 14, cha: 11 },
-      skills: "Medicine +4, Religion +2",
-      senses: "passive Perception 12",
-      languages: "any one language (usually Common)",
+      stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
+      skills: "Stealth +6",
+      senses: "Darkvision 60 ft., passive Perception 9",
+      languages: "Common, Goblin",
       traits: [
-        { name: "Spellcasting", desc: "The acolyte is a 1st-level spellcaster (Wisdom DC 12, +4 to hit with spell attacks). Spells: Cantrips: light, sacred flame, thaumaturgy; 1st level (3 slots): bless, cure wounds, sanctuary." }
+        { name: "Nimble Escape", desc: "The goblin can take the Disengage or Hide action as a bonus action on each of its turns." }
       ],
       actions: [
-        { name: "Club", desc: "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage." }
-      ]
-    },
-    {
-      name: "Bandit",
-      cr: "1/8",
-      xp: 25,
-      size: "Medium",
-      type: "Humanoid (any race)",
-      alignment: "Non-Lawful",
-      ac: 12,
-      acType: "leather armor",
-      hp: "11 (2d8 + 2)",
-      speed: "30 ft.",
-      stats: { str: 11, dex: 12, con: 12, int: 10, wis: 10, cha: 10 },
-      senses: "passive Perception 10",
-      languages: "Common",
-      traits: [],
-      actions: [
-        { name: "Scimitar", desc: "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage." },
-        { name: "Light Crossbow", desc: "Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 5 (1d8 + 1) piercing damage." }
-      ]
-    },
-    {
-      name: "Cultist",
-      cr: "1/8",
-      xp: 25,
-      size: "Medium",
-      type: "Humanoid (any race)",
-      alignment: "Non-Good",
-      ac: 12,
-      acType: "leather armor",
-      hp: "9 (2d8)",
-      speed: "30 ft.",
-      stats: { str: 11, dex: 12, con: 10, int: 10, wis: 11, cha: 10 },
-      skills: "Deception +2, Religion +2",
-      senses: "passive Perception 10",
-      languages: "Common",
-      traits: [
-        { name: "Dark Devotion", desc: "The cultist has advantage on saving throws against being charmed or frightened." }
-      ],
-      actions: [
-        { name: "Scimitar", desc: "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage." }
+        { name: "Scimitar", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." },
+        { name: "Shortbow", desc: "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage." }
       ]
     },
     {
@@ -110,48 +50,6 @@ window.SRD_DATA = {
       actions: [
         { name: "Dagger", desc: "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage." },
         { name: "Sling", desc: "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage." }
-      ]
-    },
-    {
-      name: "Stirge",
-      cr: "1/8",
-      xp: 25,
-      size: "Tiny",
-      type: "Beast",
-      alignment: "Unaligned",
-      ac: 14,
-      acType: "",
-      hp: "2 (1d4)",
-      speed: "10 ft., fly 40 ft.",
-      stats: { str: 4, dex: 16, con: 11, int: 2, wis: 8, cha: 6 },
-      senses: "Darkvision 60 ft., passive Perception 9",
-      languages: "",
-      traits: [],
-      actions: [
-        { name: "Blood Drain", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage, and the stirge attaches to the target." }
-      ]
-    },
-    {
-      name: "Goblin",
-      cr: "1/4",
-      xp: 50,
-      size: "Small",
-      type: "Humanoid (goblinoid)",
-      alignment: "Neutral Evil",
-      ac: 15,
-      acType: "leather armor, shield",
-      hp: "7 (2d6)",
-      speed: "30 ft.",
-      stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
-      skills: "Stealth +6",
-      senses: "Darkvision 60 ft., passive Perception 9",
-      languages: "Common, Goblin",
-      traits: [
-        { name: "Nimble Escape", desc: "The goblin can take the Disengage or Hide action as a bonus action on each of its turns." }
-      ],
-      actions: [
-        { name: "Scimitar", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." },
-        { name: "Shortbow", desc: "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage." }
       ]
     },
     {
@@ -270,54 +168,6 @@ window.SRD_DATA = {
       ]
     },
     {
-      name: "Ghoul",
-      cr: "1",
-      xp: 200,
-      size: "Medium",
-      type: "Undead",
-      alignment: "Chaotic Evil",
-      ac: 12,
-      acType: "",
-      hp: "22 (5d8)",
-      speed: "30 ft.",
-      stats: { str: 13, dex: 15, con: 10, int: 7, wis: 10, cha: 6 },
-      immunities: "Poison",
-      conditionImmunities: "Charmed, Exhaustion, Poisoned",
-      senses: "Darkvision 60 ft., passive Perception 10",
-      languages: "Common",
-      traits: [],
-      actions: [
-        { name: "Bite", desc: "Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 9 (2d6 + 2) piercing damage." },
-        { name: "Claws", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage. If target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute." }
-      ]
-    },
-    {
-      name: "Gargoyle",
-      cr: "2",
-      xp: 450,
-      size: "Medium",
-      type: "Elemental",
-      alignment: "Chaotic Evil",
-      ac: 15,
-      acType: "natural armor",
-      hp: "52 (7d8 + 21)",
-      speed: "30 ft., fly 60 ft.",
-      stats: { str: 15, dex: 11, con: 16, int: 6, wis: 11, cha: 7 },
-      resistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks that aren't Admantine",
-      immunities: "Poison",
-      conditionImmunities: "Exhaustion, Petrified, Poisoned",
-      senses: "Darkvision 60 ft., passive Perception 10",
-      languages: "Terran",
-      traits: [
-        { name: "False Appearance", desc: "While the gargoyle remains motionless, it is indistinguishable from an inanimate statue." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The gargoyle makes two attacks: one with its bite and one with its claws." },
-        { name: "Bite", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage." },
-        { name: "Claws", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." }
-      ]
-    },
-    {
       name: "Ogre",
       cr: "2",
       xp: 450,
@@ -335,56 +185,6 @@ window.SRD_DATA = {
       actions: [
         { name: "Greatclub", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage." },
         { name: "Javelin", desc: "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage." }
-      ]
-    },
-    {
-      name: "Gelatinous Cube",
-      cr: "2",
-      xp: 450,
-      size: "Large",
-      type: "Ooze",
-      alignment: "Unaligned",
-      ac: 6,
-      acType: "",
-      hp: "84 (8d10 + 40)",
-      speed: "15 ft.",
-      stats: { str: 14, dex: 3, con: 20, int: 1, wis: 6, cha: 1 },
-      conditionImmunities: "Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone",
-      senses: "Blindsight 60 ft. (blind beyond this radius), passive Perception 8",
-      languages: "",
-      traits: [
-        { name: "Opaque / Transparent", desc: "Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked." },
-        { name: "Engulf", desc: "The cube moves up to its speed. It can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw." }
-      ],
-      actions: [
-        { name: "Pseudopod", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) acid damage." }
-      ]
-    },
-    {
-      name: "Mimic",
-      cr: "2",
-      xp: 450,
-      size: "Medium",
-      type: "Monstrosity (shapechanger)",
-      alignment: "Neutral",
-      ac: 12,
-      acType: "natural armor",
-      hp: "58 (9d8 + 18)",
-      speed: "15 ft.",
-      stats: { str: 17, dex: 12, con: 15, int: 5, wis: 13, cha: 8 },
-      skills: "Stealth +5",
-      immunities: "Acid",
-      conditionImmunities: "Prone",
-      senses: "Darkvision 60 ft., passive Perception 11",
-      languages: "",
-      traits: [
-        { name: "Shapechanger", desc: "The mimic can use its action to polymorph into an object or back into its true, amorphous form." },
-        { name: "Adhesive", desc: "The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled (escape DC 13)." },
-        { name: "False Appearance", desc: "While remaining motionless in object form, the mimic is indistinguishable from an ordinary object." }
-      ],
-      actions: [
-        { name: "Pseudopod", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait." },
-        { name: "Bite", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage." }
       ]
     },
     {
@@ -410,97 +210,6 @@ window.SRD_DATA = {
       actions: [
         { name: "Greataxe", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage." },
         { name: "Gore", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage." }
-      ]
-    },
-    {
-      name: "Phase Spider",
-      cr: "3",
-      xp: 700,
-      size: "Large",
-      type: "Monstrosity",
-      alignment: "Unaligned",
-      ac: 13,
-      acType: "natural armor",
-      hp: "32 (5d10 + 5)",
-      speed: "30 ft., climb 30 ft.",
-      stats: { str: 15, dex: 16, con: 12, int: 6, wis: 10, cha: 6 },
-      skills: "Stealth +7",
-      senses: "Darkvision 60 ft., Spider Sense 60 ft., passive Perception 10",
-      languages: "",
-      traits: [
-        { name: "Ethereal Jaunt", desc: "As a bonus action, the spider can magically shift from the Material Plane to the Ethereal Plane, or vice versa." },
-        { name: "Spider Climb", desc: "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check." }
-      ],
-      actions: [
-        { name: "Bite", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much on a successful one." }
-      ]
-    },
-    {
-      name: "Owlbear",
-      cr: "3",
-      xp: 700,
-      size: "Large",
-      type: "Monstrosity",
-      alignment: "Unaligned",
-      ac: 13,
-      acType: "natural armor",
-      hp: "59 (7d10 + 21)",
-      speed: "40 ft.",
-      stats: { str: 20, dex: 12, con: 17, int: 3, wis: 12, cha: 7 },
-      skills: "Perception +7",
-      senses: "Darkvision 60 ft., passive Perception 17",
-      languages: "",
-      traits: [
-        { name: "Keen Sight and Smell", desc: "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The owlbear makes two attacks: one with its beak and one with its claws." },
-        { name: "Beak", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (1d10 + 5) piercing damage." },
-        { name: "Claws", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage." }
-      ]
-    },
-    {
-      name: "Manticore",
-      cr: "3",
-      xp: 700,
-      size: "Large",
-      type: "Monstrosity",
-      alignment: "Lawful Evil",
-      ac: 14,
-      acType: "natural armor",
-      hp: "68 (8d10 + 24)",
-      speed: "30 ft., fly 50 ft.",
-      stats: { str: 17, dex: 16, con: 17, int: 7, wis: 12, cha: 8 },
-      senses: "Darkvision 60 ft., passive Perception 11",
-      languages: "Common",
-      traits: [
-        { name: "Tail Spike Regrowth", desc: "The manticore has 24 tail spikes. Used spikes regrow when the manticore finishes a long rest." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The manticore makes three attacks: one with its bite and two with its claws, or three with its tail spikes." },
-        { name: "Bite", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage." },
-        { name: "Tail Spike", desc: "Ranged Weapon Attack: +5 to hit, range 100/200 ft., one target. Hit: 7 (1d8 + 3) piercing damage." }
-      ]
-    },
-    {
-      name: "Basilisk",
-      cr: "3",
-      xp: 700,
-      size: "Medium",
-      type: "Monstrosity",
-      alignment: "Unaligned",
-      ac: 15,
-      acType: "natural armor",
-      hp: "52 (8d8 + 16)",
-      speed: "20 ft.",
-      stats: { str: 16, dex: 8, con: 15, int: 2, wis: 8, cha: 7 },
-      senses: "Darkvision 60 ft., passive Perception 9",
-      languages: "",
-      traits: [
-        { name: "Petrifying Gaze", desc: "If a creature starts its turn within 30 feet of the basilisk and the two can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw or begin turning to stone." }
-      ],
-      actions: [
-        { name: "Bite", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage plus 7 (2d6) poison damage." }
       ]
     },
     {
@@ -554,31 +263,6 @@ window.SRD_DATA = {
       ]
     },
     {
-      name: "Wraith",
-      cr: "5",
-      xp: 1800,
-      size: "Medium",
-      type: "Undead",
-      alignment: "Neutral Evil",
-      ac: 13,
-      acType: "",
-      hp: "67 (9d8 + 27)",
-      speed: "0 ft., fly 60 ft. (hover)",
-      stats: { str: 6, dex: 16, con: 16, int: 12, wis: 14, cha: 15 },
-      resistances: "Acid, Cold, Fire, Lightning, Thunder; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
-      immunities: "Necrotic, Poison",
-      conditionImmunities: "Charmed, Exhaustion, Grappled, Paralysed, Petrified, Poisoned, Prone, Restrained",
-      senses: "Darkvision 60 ft., passive Perception 12",
-      languages: "understands languages it knew in life but can't speak",
-      traits: [
-        { name: "Incorporeal Movement", desc: "The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object." },
-        { name: "Sunlight Sensitivity", desc: "While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight." }
-      ],
-      actions: [
-        { name: "Life Drain", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 21 (4d8 + 3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken." }
-      ]
-    },
-    {
       name: "Hill Giant",
       cr: "5",
       xp: 1800,
@@ -601,52 +285,24 @@ window.SRD_DATA = {
       ]
     },
     {
-      name: "Fire Elemental",
-      cr: "5",
-      xp: 1800,
-      size: "Large",
-      type: "Elemental",
-      alignment: "Neutral",
-      ac: 13,
-      acType: "",
-      hp: "102 (12d10 + 36)",
-      speed: "50 ft.",
-      stats: { str: 10, dex: 17, con: 16, int: 6, wis: 10, cha: 7 },
-      resistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
-      immunities: "Fire, Poison",
-      conditionImmunities: "Exhaustion, Grappled, Paralysed, Petrified, Poisoned, Prone, Restrained, Unconscious",
-      senses: "Darkvision 60 ft., passive Perception 10",
-      languages: "Ignan",
-      traits: [
-        { name: "Fire Form", desc: "The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack takes 5 (1d10) fire damage." },
-        { name: "Water Susceptibility", desc: "For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The elemental makes two touch attacks." },
-        { name: "Touch", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) fire damage." }
-      ]
-    },
-    {
-      name: "Mage",
+      name: "Chimera",
       cr: "6",
       xp: 2300,
-      size: "Medium",
-      type: "Humanoid (any race)",
-      alignment: "Any alignment",
-      ac: 12,
-      acType: "15 with mage armor",
-      hp: "40 (9d8)",
-      speed: "30 ft.",
-      stats: { str: 9, dex: 14, con: 11, int: 17, wis: 12, cha: 11 },
-      savingThrows: "Int +6, Wis +4",
-      skills: "Arcana +6, History +6",
-      senses: "passive Perception 11",
-      languages: "any four languages",
-      traits: [
-        { name: "Spellcasting", desc: "The mage is a 9th-level spellcaster (Intelligence DC 14, +6 to hit with spell attacks). Prepared spells include fire bolt, mage armor, misty step, counterspell, fireball, cone of cold." }
-      ],
+      size: "Large",
+      type: "Monstrosity",
+      alignment: "Chaotic Evil",
+      ac: 14,
+      acType: "natural armor",
+      hp: "114 (12d10 + 48)",
+      speed: "30 ft., fly 60 ft.",
+      stats: { str: 19, dex: 11, con: 19, int: 3, wis: 14, cha: 10 },
+      skills: "Perception +8",
+      senses: "Darkvision 60 ft., passive Perception 18",
+      languages: "understands Draconic but can't speak",
+      traits: [],
       actions: [
-        { name: "Dagger", desc: "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage." }
+        { name: "Multiattack", desc: "The chimera makes three attacks: one with its bite, one with its horns, and one with its claws. When its fire breath is available, it can use the breath in place of its bite." },
+        { name: "Fire Breath (Recharge 5-6)", desc: "The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 (7d8) fire damage on a failed save, or half as much damage on a successful one." }
       ]
     },
     {
@@ -671,138 +327,7 @@ window.SRD_DATA = {
         { name: "Multiattack", desc: "The dragon makes three attacks: one with its bite and two with its claws." },
         { name: "Fire Breath (Recharge 5-6)", desc: "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one." }
       ]
-    },
-    {
-      name: "Stone Golem",
-      cr: "10",
-      xp: 5900,
-      size: "Large",
-      type: "Construct",
-      alignment: "Unaligned",
-      ac: 17,
-      acType: "natural armor",
-      hp: "178 (17d10 + 85)",
-      speed: "30 ft.",
-      stats: { str: 22, dex: 9, con: 20, int: 3, wis: 11, cha: 1 },
-      immunities: "Poison, Psychic; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks that aren't Adamantine",
-      conditionImmunities: "Charmed, Exhaustion, Frightened, Paralysed, Petrified, Poisoned",
-      senses: "Darkvision 120 ft., passive Perception 10",
-      languages: "understands the languages of its creator but can't speak",
-      traits: [
-        { name: "Immutable Form", desc: "The golem is immune to any spell or effect that would alter its form." },
-        { name: "Magic Resistance", desc: "The golem has advantage on saving throws against spells and other magical effects." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The golem makes two slam attacks." },
-        { name: "Slam", desc: "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage." },
-        { name: "Slow (Recharge 5-6)", desc: "The golem targets one or more creatures it can see within 10 feet. Each target must succeed on a DC 17 Wisdom saving throw or be slowed for 1 minute." }
-      ]
-    },
-    {
-      name: "Vampire",
-      cr: "13",
-      xp: 10000,
-      size: "Medium",
-      type: "Undead (shapechanger)",
-      alignment: "Lawful Evil",
-      ac: 16,
-      acType: "natural armor",
-      hp: "144 (17d8 + 68)",
-      speed: "30 ft.",
-      stats: { str: 18, dex: 18, con: 18, int: 17, wis: 15, cha: 18 },
-      savingThrows: "Dex +9, Wis +7, Cha +9",
-      skills: "Perception +7, Stealth +9",
-      resistances: "Necrotic; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
-      senses: "Darkvision 120 ft., passive Perception 17",
-      languages: "the languages it knew in life",
-      traits: [
-        { name: "Shapechanger", desc: "If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or Medium cloud of mist." },
-        { name: "Regeneration", desc: "The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water." }
-      ],
-      actions: [
-        { name: "Multiattack (Vampire Form Only)", desc: "The vampire makes two attacks, only one of which can be a bite attack." },
-        { name: "Unarmed Strike (Vampire Form Only)", desc: "Melee Weapon Attack: +9 to hit, reach 5 ft., one creature. Hit: 8 (1d8 + 4) bludgeoning damage." },
-        { name: "Bite (Vampire or Bat Form Only)", desc: "Melee Weapon Attack: +9 to hit, reach 5 ft., one willing creature, or a creature grappled by the vampire. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) necrotic damage." }
-      ]
-    },
-    {
-      name: "Adult Red Dragon",
-      cr: "17",
-      xp: 18000,
-      size: "Huge",
-      type: "Dragon",
-      alignment: "Chaotic Evil",
-      ac: 19,
-      acType: "natural armor",
-      hp: "256 (19d12 + 133)",
-      speed: "40 ft., climb 40 ft., fly 80 ft.",
-      stats: { str: 27, dex: 10, con: 25, int: 16, wis: 13, cha: 21 },
-      savingThrows: "Dex +6, Con +13, Wis +7, Cha +11",
-      skills: "Perception +13, Stealth +6",
-      immunities: "Fire",
-      senses: "Blindsight 60 ft., Darkvision 120 ft., passive Perception 23",
-      languages: "Common, Draconic",
-      traits: [
-        { name: "Legendary Resistance (3/Day)", desc: "If the dragon fails a saving throw, it can choose to succeed instead." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws." },
-        { name: "Fire Breath (Recharge 5-6)", desc: "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much on a successful one." }
-      ]
-    },
-    {
-      name: "Tarrasque",
-      cr: "30",
-      xp: 155000,
-      size: "Gargantuan",
-      type: "Monstrosity (titan)",
-      alignment: "Unaligned",
-      ac: 25,
-      acType: "natural armor",
-      hp: "676 (33d20 + 330)",
-      speed: "40 ft.",
-      stats: { str: 30, dex: 11, con: 30, int: 3, wis: 11, cha: 11 },
-      savingThrows: "Int +5, Wis +9, Cha +9",
-      immunities: "Fire, Poison; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
-      conditionImmunities: "Charmed, Frightened, Paralysed, Poisoned",
-      senses: "Blindsight 120 ft., passive Perception 10",
-      languages: "",
-      traits: [
-        { name: "Legendary Resistance (3/Day)", desc: "If the tarrasque fails a saving throw, it can choose to succeed instead." },
-        { name: "Reflective Carapace", desc: "Any time the tarrasque is targeted by a line spell, a spell with a ranged attack roll, or magic missile, roll a d6. On a 1 to 5, the tarrasque is unaffected. On a 6, the spell is reflected back at the caster." }
-      ],
-      actions: [
-        { name: "Multiattack", desc: "The tarrasque can use its Frightful Presence. It then makes five attacks: one with its bite, two with its claws, one with its horns, and one with its tail." },
-        { name: "Bite", desc: "Melee Weapon Attack: +19 to hit, reach 10 ft., one target. Hit: 36 (4d12 + 10) piercing damage." }
-      ]
     }
-  ],
-
-  // SRD 5.2.1 Environmental Hazards
-  hazards: [
-    { name: "Extreme Cold", effect: "DC 10 Constitution saving throw per hour or gain 1 level of Exhaustion unless wearing cold weather gear." },
-    { name: "Extreme Heat", effect: "DC 10 Constitution saving throw per hour (DC +1 per hour) or gain 1 level of Exhaustion unless provided medium water." },
-    { name: "High Altitude", effect: "Breathing difficulty above 10,000 feet. Creatures unaccustomed must succeed on DC 10 Constitution save per day or gain 1 level of Exhaustion." },
-    { name: "Quicksand", effect: "Sinks 1d4 + 1 feet. DC 10 Strength check to escape. Creatures trapped sink further each turn." },
-    { name: "Frigid Water", effect: "DC 10 Constitution save every 1 minute or gain 1 level of Exhaustion. Creature dies after minutes equal to Constitution score." },
-    { name: "Heavy Precipitation", effect: "Everything within area is lightly obscured. Disadvantage on Wisdom (Perception) checks relying on sight or hearing." }
-  ],
-
-  // Conditions SRD 5.2.1 Data
-  conditions: [
-    { name: "Blinded", desc: "Can't see and automatically fails checks that require sight. Attack rolls against the creature have advantage, and creature's attack rolls have disadvantage." },
-    { name: "Charmed", desc: "Can't attack the charmer or target charmer with harmful abilities or magical effects. Charmer has advantage on social interaction checks." },
-    { name: "Frightened", desc: "Disadvantage on ability checks and attack rolls while source of fear is in sight. Can't willingly move closer to the source of fear." },
-    { name: "Grappled", desc: "Speed becomes 0 and can't benefit from any bonus to speed. Ends if grappler is incapacitated or moved away." },
-    { name: "Incapacitated", desc: "Can't take actions or reactions." },
-    { name: "Invisible", desc: "Impossible to see without magic or special senses. Attacks against creature have disadvantage, creature's attacks have advantage." },
-    { name: "Paralyzed", desc: "Incapacitated and can't move or speak. Automatically fails Strength and Dexterity saving throws. Attacks against creature have advantage, and melee attacks within 5 ft. are critical hits." },
-    { name: "Petrified", desc: "Transformed into solid inanimate substance. Weight increases by x10. Incapacitated, unaware, automatically fails Str/Dex saves. Resistance to all damage." },
-    { name: "Poisoned", desc: "Disadvantage on attack rolls and ability checks." },
-    { name: "Prone", desc: "Can only crawl or spend half speed to stand. Disadvantage on attack rolls. Attacks against creature have advantage if within 5 ft., otherwise disadvantage." },
-    { name: "Restrained", desc: "Speed becomes 0. Attacks against creature have advantage, creature's attacks have disadvantage. Disadvantage on Dexterity saving throws." },
-    { name: "Stunned", desc: "Incapacitated, can't move, and speaks falteringly. Automatically fails Strength and Dexterity saving throws. Attacks against creature have advantage." },
-    { name: "Unconscious", desc: "Incapacitated, can't move or speak, unaware. Drops held items and falls prone. Automatically fails Str/Dex saves. Attacks within 5 ft. are critical hits." }
   ],
 
   // XP Threshold Table per character level (Easy, Medium, Hard, Deadly)
