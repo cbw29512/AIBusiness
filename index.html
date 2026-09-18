@@ -12,6 +12,7 @@
       <div class="brand">
         <h1>⚔️ DM Encounter & Loot Toolkit</h1>
         <span class="badge-srd">SRD 5.2.1 Certified</span>
+        <span id="header-pro-badge" class="badge-pro hidden">⭐ PRO UNLOCKED</span>
       </div>
       <button id="pro-modal-btn" class="btn btn-pro">✨ Pro Unlock</button>
     </div>
@@ -23,6 +24,34 @@
       <span class="ad-label">ADVERTISEMENT</span>
       <p>🎲 Enhance your campaign with SRD-compatible DM tools!</p>
     </div>
+
+    <!-- Quick Dice Roller Toolbar -->
+    <section class="card dice-roller-panel">
+      <div class="dice-header">
+        <h2>🎲 Quick Dice Roller</h2>
+        <button id="clear-dice-log-btn" class="btn btn-secondary btn-sm">Clear History</button>
+      </div>
+      <div class="dice-controls">
+        <div class="dice-btn-group">
+          <button class="btn btn-dice" data-dice="d4">d4</button>
+          <button class="btn btn-dice" data-dice="d6">d6</button>
+          <button class="btn btn-dice" data-dice="d8">d8</button>
+          <button class="btn btn-dice" data-dice="d10">d10</button>
+          <button class="btn btn-dice" data-dice="d12">d12</button>
+          <button class="btn btn-dice btn-d20" data-dice="d20">d20</button>
+          <button class="btn btn-dice" data-dice="d100">d100</button>
+        </div>
+        <div class="dice-modifier-group">
+          <label for="dice-mod">Modifier:</label>
+          <input type="number" id="dice-mod" value="0" class="mod-input">
+          <label for="dice-qty">Qty:</label>
+          <input type="number" id="dice-qty" value="1" min="1" max="20" class="qty-input">
+        </div>
+      </div>
+      <div id="dice-log" class="dice-log">
+        <span class="placeholder-text">Click any die above to roll!</span>
+      </div>
+    </section>
 
     <!-- Generator Control Panel -->
     <section class="card control-panel">
@@ -60,6 +89,10 @@
     <section class="card results-panel" id="encounter-results">
       <div class="results-header">
         <h2>Generated Encounter</h2>
+        <div class="results-actions">
+          <button id="save-encounter-btn" class="btn btn-secondary btn-sm">💾 Save Encounter</button>
+          <button id="copy-text-btn" class="btn btn-secondary btn-sm">📋 Copy Text</button>
+        </div>
         <div class="encounter-summary" id="encounter-summary">
           <!-- Dynamically populated -->
         </div>
@@ -78,6 +111,26 @@
         <div id="loot-output" class="loot-output">
           <p class="placeholder-text">Click "Roll Loot" to generate treasure for this encounter difficulty.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Saved Encounters Library -->
+    <section class="card saved-encounters-panel">
+      <h2>💾 Saved Encounters Library</h2>
+      <div id="saved-encounters-list" class="saved-list">
+        <p class="placeholder-text">No saved encounters yet. Click "Save Encounter" above to store your favorites locally!</p>
+      </div>
+    </section>
+
+    <!-- DM Quick Reference (Hazards & Conditions) -->
+    <section class="card ref-panel">
+      <h2>📖 DM Quick Reference (SRD 5.2.1)</h2>
+      <div class="ref-tabs">
+        <button id="tab-conditions-btn" class="btn btn-tab active">Conditions</button>
+        <button id="tab-hazards-btn" class="btn btn-tab">Environmental Hazards</button>
+      </div>
+      <div id="ref-content" class="ref-content">
+        <!-- Content dynamically injected -->
       </div>
     </section>
 
@@ -104,8 +157,8 @@
         <p>Unlock advanced DM features using a soft client-side license key (e.g. <code>DM-TOOLKIT-PRO-2025</code> or <code>DM-HERO-PRO</code>):</p>
         <ul>
           <li>Extended Party Size (up to 20 players)</li>
-          <li>Custom Loot Presets</li>
-          <li>Ad-free workspace toggle</li>
+          <li>Pro Bonus Treasure Rolls</li>
+          <li>Ad-free workspace & Header Badge</li>
         </ul>
         <div class="form-group">
           <label for="license-key">License Key</label>
