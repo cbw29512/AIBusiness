@@ -108,6 +108,65 @@
       </div>
     </section>
 
+    <!-- Combat & Initiative Tracker Section -->
+    <section class="card initiative-panel" id="initiative-panel">
+      <div class="panel-header">
+        <h2>⚔️ Combat Initiative & HP Tracker</h2>
+        <div class="btn-group">
+          <button id="add-custom-combatant-btn" class="btn btn-secondary btn-sm">➕ Add Custom Combatant</button>
+          <button id="load-encounter-initiative-btn" class="btn btn-accent btn-sm">📥 Load Current Encounter</button>
+          <button id="sort-initiative-btn" class="btn btn-primary btn-sm">⚡ Sort Initiative</button>
+        </div>
+      </div>
+      <div class="initiative-table-wrapper">
+        <table class="initiative-table">
+          <thead>
+            <tr>
+              <th>Init</th>
+              <th>Name</th>
+              <th>AC</th>
+              <th>Current HP</th>
+              <th>Max HP</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="initiative-list">
+            <tr class="placeholder-row">
+              <td colspan="6" class="placeholder-text">No combatants in active tracker. Click "Load Current Encounter" or "Add Custom Combatant".</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Environmental Hazards & Rest Calculator Section -->
+    <div class="two-col-grid">
+      <!-- Environmental Hazards Generator -->
+      <section class="card hazard-panel">
+        <h2>🌋 SRD Environmental Hazards</h2>
+        <button id="roll-hazard-btn" class="btn btn-accent btn-sm margin-bottom-sm">🎲 Roll Environmental Hazard</button>
+        <div id="hazard-output" class="hazard-output">
+          <p class="placeholder-text">Click to roll a random SRD 5.2.1 environmental hazard for this terrain.</p>
+        </div>
+      </section>
+
+      <!-- Party Rest & Hit Dice Recovery Calculator -->
+      <section class="card rest-panel">
+        <h2>⛺ Party Rest Calculator</h2>
+        <div class="form-group margin-bottom-sm">
+          <label for="rest-type">Rest Duration</label>
+          <select id="rest-type">
+            <option value="short">Short Rest (1 Hour)</option>
+            <option value="long">Long Rest (8 Hours)</option>
+          </select>
+        </div>
+        <button id="calculate-rest-btn" class="btn btn-primary btn-sm margin-bottom-sm">Calculate Recovery</button>
+        <div id="rest-output" class="rest-output">
+          <p class="placeholder-text">Select rest type to view Hit Dice & feature recovery rules.</p>
+        </div>
+      </section>
+    </div>
+
     <!-- SRD 5.2.1 Conditions Quick Reference -->
     <section class="card conditions-panel">
       <h2>📖 Conditions Quick Reference (SRD 5.2.1)</h2>

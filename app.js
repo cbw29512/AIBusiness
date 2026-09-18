@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentDifficulty = "medium";
   let currentTargetXP = 0;
   let currentActualXP = 0;
+  let initiativeCombatants = [];
 
   // DOM Elements
   const partySizeInput = document.getElementById("party-size");
@@ -29,6 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const conditionsGrid = document.getElementById("conditions-grid");
   const diceLog = document.getElementById("dice-log");
   const clearDiceLogBtn = document.getElementById("clear-dice-log");
+
+  // Initiative Tracker DOM Elements
+  const initiativeList = document.getElementById("initiative-list");
+  const loadEncounterInitiativeBtn = document.getElementById("load-encounter-initiative-btn");
+  const addCustomCombatantBtn = document.getElementById("add-custom-combatant-btn");
+  const sortInitiativeBtn = document.getElementById("sort-initiative-btn");
+
+  // Hazards & Rest DOM Elements
+  const rollHazardBtn = document.getElementById("roll-hazard-btn");
+  const hazardOutput = document.getElementById("hazard-output");
+  const restTypeSelect = document.getElementById("rest-type");
+  const calculateRestBtn = document.getElementById("calculate-rest-btn");
+  const restOutput = document.getElementById("rest-output");
 
   // Pro Modal Elements
   const proModalBtn = document.getElementById("pro-modal-btn");
@@ -61,6 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
       total += Math.floor(Math.random() * sides) + 1;
     }
     return total;
+  }
+
+  // Utility: Parse HP String e.g. "22 (3d8 + 8)" -> 22
+  function parseHP(hpStr) {
+    if (typeof hpStr === "number") return hpStr;
+    const val = parseInt(hpStr, 10);
+    return isNaN(val) ? 10 : val;
   }
 
   // Calculate Party XP Budget
@@ -229,6 +250,131 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
+  // --- COMBAT INITIATIVE TRACKER LOGIC ---
+  function loadEncounterIntoInitiative() {
+    initiativeCombatants = [];
+    if (currentEncounterMonsters.length === 0) return;
+
+    currentEncounterMonsters.forEach(({ monster, count }) => {
+      const dexMod = Math.floor(((monster.stats ? monster.stats.dex : 10) - 10) / 2);
+      const hp = parseHP(monster.hp);
+
+      for (let i = 1; i <= count; i++) {
+        const initRoll = rollDie(20) + dexMod;
+        const nameLabel = count > 1 ? `${monster.name} ${i}` : monster.name;
+        initiativeCombatants.push({
+          id: Date.now() + Math.random(),
+          name: nameLabel,
+          init: initRoll,
+          ac: monster.ac,
+          currentHP: hp,
+          maxHP: hp
+        });
+      }
+    });
+
+    sortInitiativeCombatants();
+    renderInitiativeTable();
+  }
+
+  function addCustomCombatant() {
+    const name = prompt("Enter Combatant Name:", "Hero Player");
+    if (!name) return;
+    const init = parseInt(prompt("Enter Initiative Roll:", "15"), 10) || 10;
+    const ac = parseInt(prompt("Enter Armor Class (AC):", "15"), 10) || 15;
+    const hp = parseInt(prompt("Enter Max Hit Points:", "25"), 10) || 25;
+
+    initiativeCombatants.push({
+      id: Date.now(),
+      name: name,
+      init: init,
+      ac: ac,
+      currentHP: hp,
+      maxHP: hp
+    });
+
+    sortInitiativeCombatants();
+    renderInitiativeTable();
+  }
+
+  function sortInitiativeCombatants() {
+    initiativeCombatants.sort((a, b) => b.init - a.init);
+  }
+
+  function renderInitiativeTable() {
+    if (initiativeCombatants.length === 0) {
+      initiativeList.innerHTML = `
+        <tr class="placeholder-row">
+          <td colspan="6" class="placeholder-text">No combatants in active tracker. Click "Load Current Encounter" or "Add Custom Combatant".</td>
+        </tr>
+      `;
+      return;
+    }
+
+    initiativeList.innerHTML = initiativeCombatants.map((c) => `
+      <tr class="init-row" data-id="${c.id}">
+        <td><input type="number" class="init-input" value="${c.init}" data-id="${c.id}" data-field="init"></td>
+        <td><strong>${c.name}</strong></td>
+        <td>${c.ac}</td>
+        <td><input type="number" class="hp-input" value="${c.currentHP}" data-id="${c.id}" data-field="currentHP"></td>
+        <td>/ ${c.maxHP}</td>
+        <td><button class="btn btn-sm btn-secondary remove-combatant-btn" data-id="${c.id}">❌</button></td>
+      </tr>
+    `).join("");
+
+    // Event handlers for inputs
+    document.querySelectorAll(".init-input, .hp-input").forEach(input => {
+      input.addEventListener("change", (e) => {
+        const id = parseFloat(e.target.dataset.id);
+        const field = e.target.dataset.field;
+        const val = parseInt(e.target.value, 10) || 0;
+        const item = initiativeCombatants.find(c => c.id === id);
+        if (item) {
+          item[field] = val;
+        }
+      });
+    });
+
+    document.querySelectorAll(".remove-combatant-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const id = parseFloat(e.target.dataset.id);
+        initiativeCombatants = initiativeCombatants.filter(c => c.id !== id);
+        renderInitiativeTable();
+      });
+    });
+  }
+
+  // --- SRD HAZARDS & REST LOGIC ---
+  function rollHazard() {
+    const hazards = window.SRD_DATA.hazards || [];
+    if (hazards.length === 0) return;
+    const item = hazards[Math.floor(Math.random() * hazards.length)];
+    hazardOutput.innerHTML = `
+      <p><strong>${item.name}:</strong> ${item.effect}</p>
+    `;
+  }
+
+  function calculateRest() {
+    const type = restTypeSelect.value;
+    const partySize = parseInt(partySizeInput.value, 10) || 4;
+    const partyLevel = parseInt(partyLevelInput.value, 10) || 1;
+
+    if (type === "short") {
+      restOutput.innerHTML = `
+        <p><strong>Short Rest (1 Hour):</strong></p>
+        <p>Each character can spend up to <strong>${partyLevel}</strong> Hit Dice to recover HP. Roll 1 Hit Die + CON mod per die spent.</p>
+        <p>Warlock spell slots, Action Surge, and Second Wind recharge.</p>
+      `;
+    } else {
+      const hdRecovered = Math.max(1, Math.floor(partyLevel / 2));
+      restOutput.innerHTML = `
+        <p><strong>Long Rest (8 Hours):</strong></p>
+        <p>All HP fully restored. Regain spent Hit Dice up to half maximum (<strong>${hdRecovered} Hit Dice</strong> regained per player).</p>
+        <p>All spell slots, class features, and racial traits fully recharge.</p>
+      `;
+    }
+  }
+
   // Roll Loot for Current Encounter
   function rollLoot() {
     const partyLevel = parseInt(partyLevelInput.value, 10) || 1;
@@ -385,6 +531,18 @@ document.addEventListener("DOMContentLoaded", () => {
   saveEncounterBtn.addEventListener("click", saveCurrentEncounter);
   rollLootBtn.addEventListener("click", rollLoot);
   printBtn.addEventListener("click", () => window.print());
+
+  // Initiative listeners
+  loadEncounterInitiativeBtn.addEventListener("click", loadEncounterIntoInitiative);
+  addCustomCombatantBtn.addEventListener("click", addCustomCombatant);
+  sortInitiativeBtn.addEventListener("click", () => {
+    sortInitiativeCombatants();
+    renderInitiativeTable();
+  });
+
+  // Hazards & Rest listeners
+  rollHazardBtn.addEventListener("click", rollHazard);
+  calculateRestBtn.addEventListener("click", calculateRest);
 
   proModalBtn.addEventListener("click", () => {
     proStatusMsg.textContent = "";

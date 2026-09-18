@@ -330,6 +330,16 @@ window.SRD_DATA = {
     }
   ],
 
+  // SRD 5.2.1 Environmental Hazards
+  hazards: [
+    { name: "Extreme Cold", effect: "DC 10 Constitution saving throw per hour or gain 1 level of Exhaustion unless wearing cold weather gear." },
+    { name: "Extreme Heat", effect: "DC 10 Constitution saving throw per hour (DC +1 per hour) or gain 1 level of Exhaustion unless provided medium water." },
+    { name: "High Altitude", effect: "Breathing difficulty above 10,000 feet. Creatures unaccustomed must succeed on DC 10 Constitution save per day or gain 1 level of Exhaustion." },
+    { name: "Quicksand", effect: "Sinks 1d4 + 1 feet. DC 10 Strength check to escape. Creatures trapped sink further each turn." },
+    { name: "Frigid Water", effect: "DC 10 Constitution save every 1 minute or gain 1 level of Exhaustion. Creature dies after minutes equal to Constitution score." },
+    { name: "Heavy Precipitation", effect: "Everything within area is lightly obscured. Disadvantage on Wisdom (Perception) checks relying on sight or hearing." }
+  ],
+
   // Conditions SRD 5.2.1 Data
   conditions: [
     { name: "Blinded", desc: "Can't see and automatically fails checks that require sight. Attack rolls against the creature have advantage, and creature's attack rolls have disadvantage." },
