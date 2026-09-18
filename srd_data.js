@@ -7,26 +7,45 @@ window.SRD_DATA = {
   // Monster SRD Database
   monsters: [
     {
-      name: "Goblin",
-      cr: "1/4",
-      xp: 50,
-      size: "Small",
-      type: "Humanoid (goblinoid)",
-      alignment: "Neutral Evil",
-      ac: 15,
-      acType: "leather armor, shield",
-      hp: "7 (2d6)",
+      name: "Bandit",
+      cr: "1/8",
+      xp: 25,
+      size: "Medium",
+      type: "Humanoid (any race)",
+      alignment: "Non-Lawful",
+      ac: 12,
+      acType: "leather armor",
+      hp: "11 (2d8 + 2)",
       speed: "30 ft.",
-      stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
-      skills: "Stealth +6",
-      senses: "Darkvision 60 ft., passive Perception 9",
-      languages: "Common, Goblin",
+      stats: { str: 11, dex: 12, con: 12, int: 10, wis: 10, cha: 10 },
+      senses: "passive Perception 10",
+      languages: "Common",
+      traits: [],
+      actions: [
+        { name: "Scimitar", desc: "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage." },
+        { name: "Light Crossbow", desc: "Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 5 (1d8 + 1) piercing damage." }
+      ]
+    },
+    {
+      name: "Cultist",
+      cr: "1/8",
+      xp: 25,
+      size: "Medium",
+      type: "Humanoid (any race)",
+      alignment: "Non-Good",
+      ac: 12,
+      acType: "leather armor",
+      hp: "9 (2d8)",
+      speed: "30 ft.",
+      stats: { str: 11, dex: 12, con: 10, int: 10, wis: 11, cha: 10 },
+      skills: "Deception +2, Religion +2",
+      senses: "passive Perception 10",
+      languages: "Common",
       traits: [
-        { name: "Nimble Escape", desc: "The goblin can take the Disengage or Hide action as a bonus action on each of its turns." }
+        { name: "Dark Devotion", desc: "The cultist has advantage on saving throws against being charmed or frightened." }
       ],
       actions: [
-        { name: "Scimitar", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." },
-        { name: "Shortbow", desc: "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage." }
+        { name: "Scimitar", desc: "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage." }
       ]
     },
     {
@@ -50,6 +69,29 @@ window.SRD_DATA = {
       actions: [
         { name: "Dagger", desc: "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage." },
         { name: "Sling", desc: "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage." }
+      ]
+    },
+    {
+      name: "Goblin",
+      cr: "1/4",
+      xp: 50,
+      size: "Small",
+      type: "Humanoid (goblinoid)",
+      alignment: "Neutral Evil",
+      ac: 15,
+      acType: "leather armor, shield",
+      hp: "7 (2d6)",
+      speed: "30 ft.",
+      stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
+      skills: "Stealth +6",
+      senses: "Darkvision 60 ft., passive Perception 9",
+      languages: "Common, Goblin",
+      traits: [
+        { name: "Nimble Escape", desc: "The goblin can take the Disengage or Hide action as a bonus action on each of its turns." }
+      ],
+      actions: [
+        { name: "Scimitar", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." },
+        { name: "Shortbow", desc: "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage." }
       ]
     },
     {
@@ -168,6 +210,32 @@ window.SRD_DATA = {
       ]
     },
     {
+      name: "Gargoyle",
+      cr: "2",
+      xp: 450,
+      size: "Medium",
+      type: "Elemental",
+      alignment: "Chaotic Evil",
+      ac: 15,
+      acType: "natural armor",
+      hp: "52 (7d8 + 21)",
+      speed: "30 ft., fly 60 ft.",
+      stats: { str: 15, dex: 11, con: 16, int: 6, wis: 11, cha: 7 },
+      resistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks that aren't Admantine",
+      immunities: "Poison",
+      conditionImmunities: "Exhaustion, Petrified, Poisoned",
+      senses: "Darkvision 60 ft., passive Perception 10",
+      languages: "Terran",
+      traits: [
+        { name: "False Appearance", desc: "While the gargoyle remains motionless, it is indistinguishable from an inanimate statue." }
+      ],
+      actions: [
+        { name: "Multiattack", desc: "The gargoyle makes two attacks: one with its bite and one with its claws." },
+        { name: "Bite", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage." },
+        { name: "Claws", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage." }
+      ]
+    },
+    {
       name: "Ogre",
       cr: "2",
       xp: 450,
@@ -185,6 +253,29 @@ window.SRD_DATA = {
       actions: [
         { name: "Greatclub", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage." },
         { name: "Javelin", desc: "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage." }
+      ]
+    },
+    {
+      name: "Gelatinous Cube",
+      cr: "2",
+      xp: 450,
+      size: "Large",
+      type: "Ooze",
+      alignment: "Unaligned",
+      ac: 6,
+      acType: "",
+      hp: "84 (8d10 + 40)",
+      speed: "15 ft.",
+      stats: { str: 14, dex: 3, con: 20, int: 1, wis: 6, cha: 1 },
+      conditionImmunities: "Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone",
+      senses: "Blindsight 60 ft. (blind beyond this radius), passive Perception 8",
+      languages: "",
+      traits: [
+        { name: "Opaque / Transparent", desc: "Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked." },
+        { name: "Engulf", desc: "The cube moves up to its speed. It can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw." }
+      ],
+      actions: [
+        { name: "Pseudopod", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) acid damage." }
       ]
     },
     {
@@ -213,6 +304,29 @@ window.SRD_DATA = {
       ]
     },
     {
+      name: "Phase Spider",
+      cr: "3",
+      xp: 700,
+      size: "Large",
+      type: "Monstrosity",
+      alignment: "Unaligned",
+      ac: 13,
+      acType: "natural armor",
+      hp: "32 (5d10 + 5)",
+      speed: "30 ft., climb 30 ft.",
+      stats: { str: 15, dex: 16, con: 12, int: 6, wis: 10, cha: 6 },
+      skills: "Stealth +7",
+      senses: "Darkvision 60 ft., Spider Sense 60 ft., passive Perception 10",
+      languages: "",
+      traits: [
+        { name: "Ethereal Jaunt", desc: "As a bonus action, the spider can magically shift from the Material Plane to the Ethereal Plane, or vice versa." },
+        { name: "Spider Climb", desc: "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check." }
+      ],
+      actions: [
+        { name: "Bite", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much on a successful one." }
+      ]
+    },
+    {
       name: "Ettin",
       cr: "4",
       xp: 1100,
@@ -235,6 +349,30 @@ window.SRD_DATA = {
         { name: "Multiattack", desc: "The ettin makes two attacks: one with its battleaxe and one with its morningstar." },
         { name: "Battleaxe", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage." },
         { name: "Morningstar", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage." }
+      ]
+    },
+    {
+      name: "Owlbear",
+      cr: "3",
+      xp: 700,
+      size: "Large",
+      type: "Monstrosity",
+      alignment: "Unaligned",
+      ac: 13,
+      acType: "natural armor",
+      hp: "59 (7d10 + 21)",
+      speed: "40 ft.",
+      stats: { str: 20, dex: 12, con: 17, int: 3, wis: 12, cha: 7 },
+      skills: "Perception +7",
+      senses: "Darkvision 60 ft., passive Perception 17",
+      languages: "",
+      traits: [
+        { name: "Keen Sight and Smell", desc: "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell." }
+      ],
+      actions: [
+        { name: "Multiattack", desc: "The owlbear makes two attacks: one with its beak and one with its claws." },
+        { name: "Beak", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (1d10 + 5) piercing damage." },
+        { name: "Claws", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage." }
       ]
     },
     {
@@ -263,46 +401,51 @@ window.SRD_DATA = {
       ]
     },
     {
-      name: "Hill Giant",
-      cr: "5",
-      xp: 1800,
-      size: "Huge",
-      type: "Giant",
-      alignment: "Chaotic Evil",
-      ac: 13,
+      name: "Manticore",
+      cr: "3",
+      xp: 700,
+      size: "Large",
+      type: "Monstrosity",
+      alignment: "Lawful Evil",
+      ac: 14,
       acType: "natural armor",
-      hp: "105 (10d12 + 40)",
-      speed: "40 ft.",
-      stats: { str: 21, dex: 8, con: 19, int: 5, wis: 9, cha: 6 },
-      skills: "Perception +2",
-      senses: "passive Perception 12",
-      languages: "Giant",
-      traits: [],
+      hp: "68 (8d10 + 24)",
+      speed: "30 ft., fly 50 ft.",
+      stats: { str: 17, dex: 16, con: 17, int: 7, wis: 12, cha: 8 },
+      senses: "Darkvision 60 ft., passive Perception 11",
+      languages: "Common",
+      traits: [
+        { name: "Tail Spike Regrowth", desc: "The manticore has 24 tail spikes. Used spikes regrow when the manticore finishes a long rest." }
+      ],
       actions: [
-        { name: "Multiattack", desc: "The giant makes two greatclub attacks." },
-        { name: "Greatclub", desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 18 (3d8 + 5) bludgeoning damage." },
-        { name: "Rock", desc: "Ranged Weapon Attack: +8 to hit, range 60/240 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage." }
+        { name: "Multiattack", desc: "The manticore makes three attacks: one with its bite and two with its claws, or three with its tail spikes." },
+        { name: "Bite", desc: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage." },
+        { name: "Tail Spike", desc: "Ranged Weapon Attack: +5 to hit, range 100/200 ft., one target. Hit: 7 (1d8 + 3) piercing damage." }
       ]
     },
     {
-      name: "Chimera",
-      cr: "6",
-      xp: 2300,
-      size: "Large",
-      type: "Monstrosity",
-      alignment: "Chaotic Evil",
-      ac: 14,
-      acType: "natural armor",
-      hp: "114 (12d10 + 48)",
-      speed: "30 ft., fly 60 ft.",
-      stats: { str: 19, dex: 11, con: 19, int: 3, wis: 14, cha: 10 },
-      skills: "Perception +8",
-      senses: "Darkvision 60 ft., passive Perception 18",
-      languages: "understands Draconic but can't speak",
-      traits: [],
+      name: "Wraith",
+      cr: "5",
+      xp: 1800,
+      size: "Medium",
+      type: "Undead",
+      alignment: "Neutral Evil",
+      ac: 13,
+      acType: "",
+      hp: "67 (9d8 + 27)",
+      speed: "0 ft., fly 60 ft. (hover)",
+      stats: { str: 6, dex: 16, con: 16, int: 12, wis: 14, cha: 15 },
+      resistances: "Acid, Cold, Fire, Lightning, Thunder; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
+      immunities: "Necrotic, Poison",
+      conditionImmunities: "Charmed, Exhaustion, Grappled, Paralysed, Petrified, Poisoned, Prone, Restrained",
+      senses: "Darkvision 60 ft., passive Perception 12",
+      languages: "understands languages it knew in life but can't speak",
+      traits: [
+        { name: "Incorporeal Movement", desc: "The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object." },
+        { name: "Sunlight Sensitivity", desc: "While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight." }
+      ],
       actions: [
-        { name: "Multiattack", desc: "The chimera makes three attacks: one with its bite, one with its horns, and one with its claws. When its fire breath is available, it can use the breath in place of its bite." },
-        { name: "Fire Breath (Recharge 5-6)", desc: "The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 (7d8) fire damage on a failed save, or half as much damage on a successful one." }
+        { name: "Life Drain", desc: "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 21 (4d8 + 3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken." }
       ]
     },
     {

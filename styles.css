@@ -84,13 +84,6 @@ body {
   font-weight: 700;
 }
 
-/* Two Column Grid */
-.two-col-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
 /* Cards & Layout */
 .card {
   background-color: var(--card-bg);
@@ -113,169 +106,6 @@ body {
   color: var(--accent-gold);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
-}
-
-.panel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.margin-bottom-sm {
-  margin-bottom: 0.75rem;
-}
-
-/* Initiative Tracker */
-.initiative-table-wrapper {
-  overflow-x: auto;
-}
-
-.initiative-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 0.9rem;
-}
-
-.initiative-table th,
-.initiative-table td {
-  padding: 0.6rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.initiative-table th {
-  background-color: #0f172a;
-  color: var(--text-muted);
-}
-
-.init-input,
-.hp-input {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  width: 65px;
-  padding: 0.3rem;
-  border-radius: 4px;
-  text-align: center;
-}
-
-/* Dice Roller Bar */
-.dice-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.btn-dice {
-  background-color: #0f172a;
-  color: var(--accent-gold);
-  border: 1px solid var(--accent-gold);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-dice:hover {
-  background-color: var(--accent-gold);
-  color: #0f172a;
-}
-
-.dice-log {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.6rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  min-height: 40px;
-  align-items: center;
-}
-
-.dice-placeholder,
-.placeholder-text {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-.dice-badge {
-  background-color: var(--card-sub-bg);
-  color: #38bdf8;
-  border: 1px solid #0284c7;
-  border-radius: 4px;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* Saved Encounters */
-.saved-encounters-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.saved-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0f172a;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  border: 1px solid var(--border-color);
-}
-
-.saved-meta {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-left: 0.5rem;
-}
-
-.saved-actions {
-  display: flex;
-  gap: 0.4rem;
-}
-
-/* Hazards & Rest Outputs */
-.hazard-output,
-.rest-output {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.8rem;
-  font-size: 0.88rem;
-}
-
-/* Conditions Quick Reference */
-.conditions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.condition-card {
-  background-color: #0f172a;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.8rem;
-}
-
-.condition-card h4 {
-  color: #38bdf8;
-  margin-bottom: 0.3rem;
-  font-size: 0.95rem;
-}
-
-.condition-card p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
 }
 
 /* Form Controls */
@@ -312,7 +142,6 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 /* Buttons */
@@ -324,12 +153,6 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0.95rem;
-}
-
-.btn-sm {
-  padding: 0.25rem 0.6rem;
-  font-size: 0.8rem;
-  border-radius: 4px;
 }
 
 .btn-primary {
@@ -349,11 +172,6 @@ body {
 
 .btn-secondary:hover {
   background-color: #475569;
-}
-
-.btn-copied {
-  background-color: #059669 !important;
-  color: #ffffff !important;
 }
 
 .btn-accent {
@@ -427,12 +245,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.stat-header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stat-header h3 {
   font-size: 1.2rem;
   color: #ef4444;
@@ -496,6 +308,12 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 1rem;
+}
+
+.loot-item-list {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Print Panel */
@@ -593,7 +411,7 @@ body {
     color: #000000 !important;
   }
 
-  .app-header, .ad-banner, .control-panel, .dice-roller-panel, .saved-panel, .initiative-panel, .hazard-panel, .rest-panel, .conditions-panel, .loot-section, .print-header, .app-footer, .btn, .copy-stat-btn {
+  .app-header, .ad-banner, .control-panel, .loot-section, .print-header, .app-footer, .btn {
     display: none !important;
   }
 
